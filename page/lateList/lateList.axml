@@ -1,0 +1,25 @@
+<view>
+  <view class="section">
+    <!-- <input class="section-input" controlled="{{true}}" value="{{date}}" readOnly="true" placeholder="请选择" placeholder-style="margin-right:8px" onFocus="datePick" style="width:50%;height:45px;margin-right:10px;float:left;"/> -->
+    <view class="date-input" onTap="datePick"> {{date}}</view>
+  </view>
+  <view class="button">
+    <button type="primary" onTap="queryLateList" style="width:40%;margin-left:10px;">查询迟到记录</button>
+  </view>
+  <list>
+    <block a:for="{{items}}">
+      <list-item
+        key="item-{{index}}"
+        index="{{index}}"
+        last="{{index === (items.length - 1)}}">
+        <view> 打卡时间：{{item.signTime}} </view>
+        <view>
+          <view class="am-list-brief" style="float:left;margin-top:5px;color:{{item.hasProcess ? 'black' : 'red'}}">迟到分钟数：{{item.lateMinutes}}</view>
+          <view class="am-list-extra" style="font-size:14px;color:{{item.hasProcess ? 'black' : 'red'}}" >是否免扣：{{item.hasProcess ? '是' : '否'}}</view>
+        </view>
+        <!-- <view style="height:2px;background-color:#f7f7f7;"></view> -->
+      </list-item>
+    </block>
+    <view class="list-footer" slot="footer" style="color:red" >合计：{{totalMinutes}}分钟</view>
+  </list>
+</view>

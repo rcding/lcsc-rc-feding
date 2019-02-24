@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="section">
+    <view class="title">Type</view>
+    <button type="default">default</button>
+    <button type="primary">primary</button>
+    <button type="warn">warn</button>
+  </view>
+  <view class="section" style="background:#ddd;">
+    <view class="title">Misc</view>
+    <button type="default" plain>plain</button>
+    <button type="default" disabled>disabled</button>
+    <button type="default" loading={{true}}>loading</button>
+    <button type="default" hover-class="red">hover-red</button>
+  </view>
+  <view class="section">
+    <view class="title">Size</view>
+    <button type="default" size="mini">mini</button>
+  </view>
+  <view class="section">
+    <view class="title">Type</view>
+    <form onSubmit="onSubmit" onReset="onReset">
+      <button form-type="submit">submit</button>
+      <button form-type="reset">reset</button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,24 @@
+.section {
+  width: 100%;
+  margin: 5px;
+}
+.section-title {
+  display: inline-block;
+  width: 80px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.section-input {
+  display: inline-block;
+  height: 20px;
+  width: 94%;
+}
+.button {
+  margin: 5px;
+}
+.list-footer {
+  text-align: right;
+  font-size: 15px;
+}
+.mark-btn {
+  background-color: aquamarine;
+}

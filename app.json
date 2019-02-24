@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "page/index/index",
+    "page/lateList/lateList",
+    "page/nosignList/nosignList",
+    "page/subsidyList/subsidyList"
+  ],
+  "window": {
+    "enableWK": "YES",
+    "enableDSL": true,
+    "defaultTitle": "考勤助手",
+    "backgroundColor": "#F5F5F9",
+    "pullRefresh": false,
+    "allowsBounceVertical": true
+  },
+  "tabBar": {
+    "textColor": "#404040",
+    "selectedColor": "#108ee9",
+    "backgroundColor": "#F5F5F9",
+    "items": []
+  },
+  "debug": true
+}

@@ -1,0 +1,24 @@
+<view>
+  <view class="section">
+    <view class="date-input" onTap="datePick"> {{date}}</view>
+  </view>
+  <view class="button">
+    <button type="primary" onTap="queryDataList" style="width:40%;margin-left:10px;">查询漏卡记录</button>
+  </view>
+  <list>
+    <block a:for="{{items}}">
+      <list-item
+        key="item-{{index}}"
+        index="{{index}}"
+        last="{{index === (items.length - 1)}}">
+        <view> 打卡日期：{{item.noSignDay}} </view>
+        <view>
+          <view class="am-list-brief" style="float:left;margin-top:5px;color:{{item.hasProcess ? 'black' : 'red'}}">漏卡时间：{{item.noSignTime}}</view>
+          <view class="am-list-extra" style="font-size:14px;color:{{item.hasProcess ? 'black' : 'red'}}" >是否补签：{{item.hasProcess ? '是' : '否'}}</view>
+        </view>
+        <!-- <view style="height:2px;background-color:#f7f7f7;"></view> -->
+      </list-item>
+    </block>
+    <view class="list-footer" slot="footer" style="color:red" >合计：{{items.length}}次</view>
+  </list>
+</view>
