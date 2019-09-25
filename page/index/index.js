@@ -20,6 +20,7 @@ Page({
         dd.showLoading();
         dd.getAuthCode({
             success:(res)=>{
+               console.log("httpRequest  ffs---",res)
                 this.setData({
                     authCode:res.authCode
                 })

@@ -17,3 +17,8 @@ margin-top: 5px;
 font-family: YouYuan
 } 
 
+.myButton {
+  width: 100px;
+  height: 100px;
+  background: url('/static/icon.jpg');
+}

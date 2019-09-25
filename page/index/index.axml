@@ -12,6 +12,10 @@
         <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showException">补</button>
         <view class="bttitle">交通补贴</view>
       </view>
+      <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
+        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showException">会</button>
+        <view class="bttitle">我要开会</view>
+      </view>
     </view>
 
     <view hidden="{{hideList}}">

@@ -17,7 +17,7 @@ App({
     authCode : '',
     userId : '',
     userName : '',
-    serviceurl : 'http://rclee.ding.vaiwan.com:8081',
+    serviceurl : 'https://fatdingding.szlcsc.com',
     startDate:'2019-01',
     sysdate : new Date().getFullYear() +'-' + (new Date().getMonth() < 9 ? '0':'') + (new Date().getMonth() + 1)
   }
