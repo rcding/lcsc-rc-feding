@@ -3,7 +3,8 @@
     "page/index/index",
     "page/lateList/lateList",
     "page/nosignList/nosignList",
-    "page/subsidyList/subsidyList"
+    "page/subsidyList/subsidyList",
+    "page/meetingList/meetingList"
   ],
   "window": {
     "enableWK": "YES",
