@@ -5,5 +5,5 @@ require('../../node_modules/mini-ddui/es/list/list-item/index');
 require('../../page/index/index');
 require('../../page/lateList/lateList');
 require('../../page/nosignList/nosignList');
-require('../../page/test/test');
 require('../../page/subsidyList/subsidyList');
+require('../../page/meetingList/meetingList');

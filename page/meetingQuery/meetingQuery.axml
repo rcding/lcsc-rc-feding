@@ -1,0 +1,27 @@
+<view>
+  <form class="form" onSubmit="formSubmit" onReset="formReset">
+    <view class="section">
+      <view class="item">
+        <view class="item_title">主持人</view>
+        <input class="item_input" name="dingUserName" placeholder="请输入主持人" onInput="dingUserNameInput"/>
+      </view>
+      <view class="item">
+        <view class="item_title">会议主题</view>
+        <input class="item_input" name="meetingName" placeholder="请输入会议主题"  onInput="meetingNameInput"/>
+      </view>
+      <view class="item">
+        <view class="item_title">会议时长</view>
+        <view class="item_input">
+          <picker onChange="bindObjPickerChange" value="{{timeSpan}}" range="{{timeSpanList}}" range-key="code">
+          <view class="row">
+            <view class="row-extra">当前选择：{{timeSpan[timeSpan].name}}</view>
+          </view>
+        </picker>
+        </view>
+      </view>
+    </view>
+  </form>
+  <view class="button-wrap">
+    <button type="primary" onTap="queryDataList" style="width:40%;margin-left:10px;">查询交通补贴</button>
+  </view>
+</view>

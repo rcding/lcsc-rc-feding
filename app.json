@@ -4,7 +4,8 @@
     "page/lateList/lateList",
     "page/nosignList/nosignList",
     "page/subsidyList/subsidyList",
-    "page/meetingList/meetingList"
+    "page/meetingList/meetingList",
+    "page/meetingQuery/meetingQuery"
   ],
   "window": {
     "enableWK": "YES",

@@ -24,8 +24,8 @@
   }
 
   // eslint-disable-next-line
-  var OriginalFunction = Function;
-  var OriginalFetch = self.fetch;
+  var OriginFunction = Function;
+  var OriginFetch = self.fetch;
 
   var callInternalAPI = function callInternalAPI(api, param) {
     var actionData = {
@@ -38,8 +38,8 @@
     var apiQueryString = encodeURIComponent(JSON.stringify(actionData));
     var url = 'https://alipay.kylinBridge/?data=' + apiQueryString;
 
-    if (OriginalFetch) {
-      OriginalFetch(url, {
+    if (OriginFetch) {
+      OriginFetch(url, {
         mode: 'no-cors'
       }).then(function () {}).catch(function () {});
     } else {
@@ -78,7 +78,7 @@
             });
           };
           try {
-            new OriginalFunction('requestId', 'sendBack', '\n              const res = ' + data.script + ';\n              console.log(res);\n            ')(requestId, sendBack);
+            new OriginFunction('requestId', 'sendBack', '\n              const res = ' + data.script + ';\n              console.log(res);\n            ')(requestId, sendBack);
           } catch (error) {
             console.error(error.name + ':' + error.message);
           }
@@ -105,11 +105,8 @@
   }, 10);
 
   ['log', 'info', 'error', 'debug', 'warn'].forEach(function (type) {
-    var originalType = 'o' + type;
-    if (console[originalType]) {
-      return;
-    }
-    console[originalType] = console[type];
+    var originType = 'o' + type;
+    console[originType] = console[type];
     console[type] = function () {
       var _console;
 
@@ -117,7 +114,7 @@
         args[_key] = arguments[_key];
       }
 
-      (_console = console)[originalType].apply(_console, args);
+      (_console = console)[originType].apply(_console, args);
       var content = void 0;
       try {
         content = CircularJSON.stringify(args.map(function (i) {
@@ -143,7 +140,7 @@ require('../../node_modules/mini-ddui/es/list/list-item/index');
 require('../../page/index/index');
 require('../../page/lateList/lateList');
 require('../../page/nosignList/nosignList');
-require('../../page/test/test');
 require('../../page/subsidyList/subsidyList');
+require('../../page/meetingList/meetingList');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();

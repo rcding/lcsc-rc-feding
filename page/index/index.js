@@ -71,6 +71,9 @@ Page({
     showException(){
       dd.navigateTo({url:'/page/subsidyList/subsidyList'});
     },
+    showMeeting(){
+      dd.navigateTo({url:'/page/meetingQuery/meetingQuery'});
+    },
     onLoad(){
         let _this = this;
 

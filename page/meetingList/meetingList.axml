@@ -1,3 +1,19 @@
-<view>
-  New Page
+<view class="wrap">
+  <scroll-view class="scroll">
+    <list>
+    <block a:for="{{items}}">
+      <list-item
+        key="item-{{index}}"
+        index="{{index}}"
+        last="{{index === (items.length - 1)}}">
+        <view class="card">
+          <view class="title">{{item.dingUserName}}</view>
+          <view class="content">
+            <view class="content_left">{{item.meetingName}}</view>
+            <view class="content_right">{{item.costTime}}</view>
+          </view>
+        </view>
+      </list-item>
+    </block>
+  </scroll-view>
 </view>
