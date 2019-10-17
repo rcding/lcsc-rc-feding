@@ -1,0 +1,18 @@
+<view class="wrap">
+  <view class="box">
+    <view class="ul">
+      <view class="li">
+        <view class="span"></view>
+        <view class="span">时</view>
+      </view>
+      <view>
+        <view class="span"></view>
+        <view class="span">分</view>
+      </view>
+      <view>
+        <view class="span"></view>
+        <view class="span">秒</view>
+      </view>
+    </view>
+  </view>
+</view>

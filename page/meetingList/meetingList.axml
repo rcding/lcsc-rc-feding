@@ -1,7 +1,7 @@
 <view class="wrap">
   <scroll-view class="scroll">
-    <list>
-    <block a:for="{{items}}">
+    <scroll-view class="scroll_view" scroll-y="{{true}}" onScrollToLower="lower" scroll-top="{{scrollTop}}">
+      <block a:for="{{items}}">
       <list-item
         key="item-{{index}}"
         index="{{index}}"
@@ -18,5 +18,6 @@
         </view>
       </list-item>
     </block>
+    </scroll-view>
   </scroll-view>
 </view>

@@ -5,7 +5,8 @@
     "page/nosignList/nosignList",
     "page/subsidyList/subsidyList",
     "page/meetingList/meetingList",
-    "page/meetingQuery/meetingQuery"
+    "page/meetingQuery/meetingQuery",
+    "page/meeting/meeting"
   ],
   "window": {
     "enableWK": "YES",

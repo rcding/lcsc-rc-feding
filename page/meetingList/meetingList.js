@@ -9,26 +9,73 @@ Page({
         dingUserName: '喻福松',
         meetingName: '开了一个会',
         costTime: '会议中',
+        startTime: '2019.10.12',
       },
       {
         dingUserName: '李一凡',
         meetingName: '又开了一个会',
         costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
       },
       {
         dingUserName: '李一凡',
         meetingName: '又开了一个会',
         costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:6',
       },
       {
         dingUserName: '李一凡',
         meetingName: '又开了一个会',
         costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
       },
       {
         dingUserName: '李一凡',
         meetingName: '又开了一个会',
         costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李一凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李一凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李一凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李二凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李二凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李二凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
+      },
+      {
+        dingUserName: '李二凡',
+        meetingName: '又开了一个会',
+        costTime: '1h23min56sec',
+        startTime: '2019.10.12 12:32:09',
       },
     ],
   },
@@ -40,10 +87,14 @@ Page({
       timeSpan: query.timeSpan || ''
     });
     this.getList();
+    setTimeout(function(){
+      console.log(222);
+    }, 200);
+    console.log(document);
   },
   getList() {
     console.log(this.data);
-    let url = app.globalData.serviceurl + '/meeting/page?a1=1&';
+    let url = app.globalData.serviceurl + '/meeting/page?';
     if (this.data.dingUserId !== '全部') {
       console.log(this.data.dingUserId);
       url += 'dingUserId=' + this.data.dingUserId + '&';
@@ -79,5 +130,8 @@ Page({
         dd.hideLoading();
       }
     });
+  },
+  lower(e) {
+    console.log(11);
   },
 });

@@ -71,8 +71,11 @@ Page({
     showException(){
       dd.navigateTo({url:'/page/subsidyList/subsidyList'});
     },
-    showMeeting(){
+    showMeetingList() {
       dd.navigateTo({url:'/page/meetingQuery/meetingQuery'});
+    },
+    showMeeting(){
+      dd.navigateTo({url:'/page/meeting/meeting'});
     },
     onLoad(){
         let _this = this;
