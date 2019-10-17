@@ -22,6 +22,16 @@
   margin-left: 15px;
   line-height: 25px;
 }
+.title_left{
+  width: 50%;
+  margin-left: 15px;
+  font-size: 15px;
+}
+.title_right{
+  width: 50%;
+  margin-left: 15px;
+  font-size: 15px;
+}
 .content{
   height: 35px;
   display: flex;

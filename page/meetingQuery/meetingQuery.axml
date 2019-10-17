@@ -3,25 +3,19 @@
     <view class="section">
       <view class="item">
         <view class="item_title">主持人</view>
-        <input class="item_input" name="dingUserName" placeholder="请输入主持人" onInput="dingUserNameInput"/>
+        <input class="item_input" name="dingUserName" placeholder="请选择主持人" readonly="readonly" value={{dingUserName}} onFocus="openUserActionSheet"/>
       </view>
       <view class="item">
         <view class="item_title">会议主题</view>
-        <input class="item_input" name="meetingName" placeholder="请输入会议主题"  onInput="meetingNameInput"/>
+        <input class="item_input" name="meetingName" placeholder="请选择会议主题" readonly="readonly" value={{meetingName}} onFocus="openMeetingNameActionSheet"/>
       </view>
       <view class="item">
         <view class="item_title">会议时长</view>
-        <view class="item_input">
-          <picker onChange="bindObjPickerChange" value="{{timeSpan}}" range="{{timeSpanList}}" range-key="code">
-          <view class="row">
-            <view class="row-extra">当前选择：{{timeSpan[timeSpan].name}}</view>
-          </view>
-        </picker>
-        </view>
+        <input class="item_input" name="meetingName" placeholder="请选择会议主题" readonly="readonly" value={{timeSpan}} onFocus="openTimeActionSheet"/>
       </view>
     </view>
   </form>
   <view class="button-wrap">
-    <button type="primary" onTap="queryDataList" style="width:40%;margin-left:10px;">查询交通补贴</button>
+    <button type="primary" onTap="queryDataList" style="width:40%;margin-left:10px;">查询</button>
   </view>
 </view>

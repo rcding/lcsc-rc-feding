@@ -7,7 +7,10 @@
         index="{{index}}"
         last="{{index === (items.length - 1)}}">
         <view class="card">
-          <view class="title">{{item.dingUserName}}</view>
+          <view class="title">
+            <view class="title_left">{{item.dingUserName}}</view>
+            <view class="title_right">{{item.startTime}}</view>
+          </view>
           <view class="content">
             <view class="content_left">{{item.meetingName}}</view>
             <view class="content_right">{{item.costTime}}</view>

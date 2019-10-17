@@ -7,3 +7,4 @@ require('../../page/lateList/lateList');
 require('../../page/nosignList/nosignList');
 require('../../page/subsidyList/subsidyList');
 require('../../page/meetingList/meetingList');
+require('../../page/meetingQuery/meetingQuery');
