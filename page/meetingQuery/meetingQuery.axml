@@ -3,15 +3,24 @@
     <view class="section">
       <view class="item">
         <view class="item_title">主持人</view>
-        <input class="item_input" name="dingUserName" placeholder="请选择主持人" readonly="readonly" value={{dingUserName}} onFocus="openUserActionSheet"/>
+        <view class="item_input" name="dingUserName" onTap="openUserActionSheet">
+          <view a:if="{{!isShowUserPlaceholder}}">{{dingUserName}}</view>
+          <view class="placeholder" a:if="{{isShowUserPlaceholder}}">请选择会议主持人</view>
+        </view>
       </view>
       <view class="item">
         <view class="item_title">会议主题</view>
-        <input class="item_input" name="meetingName" placeholder="请选择会议主题" readonly="readonly" value={{meetingName}} onFocus="openMeetingNameActionSheet"/>
+        <view class="item_input" name="meetingName" onTap="openMeetingNameActionSheet">
+          <view a:if="{{!isShowMeetingPlaceholder}}">{{meetingName}}</view>
+          <view class="placeholder" a:if="{{isShowMeetingPlaceholder}}">请选择会议主题</view>
+        </view>
       </view>
       <view class="item">
         <view class="item_title">会议时长</view>
-        <input class="item_input" name="meetingName" placeholder="请选择会议主题" readonly="readonly" value={{timeSpan}} onFocus="openTimeActionSheet"/>
+        <view class="item_input" name="meetingName" onTap="openTimeActionSheet">
+          <view a:if="{{!isShowTimePlaceholder}}">{{timeSpan}}</view>
+          <view class="placeholder" a:if="{{isShowTimePlaceholder}}">请选择会议时长</view>
+        </view>
       </view>
     </view>
   </form>

@@ -2,17 +2,20 @@
   <view class="box">
     <view class="ul">
       <view class="li">
-        <view class="span"></view>
+        <view class="span">{{hour}}</view>
         <view class="span">时</view>
       </view>
-      <view>
-        <view class="span"></view>
+      <view class="li">
+        <view class="span">{{minute}}</view>
         <view class="span">分</view>
       </view>
-      <view>
-        <view class="span"></view>
+      <view class="li">
+        <view class="span">{{second}}</view>
         <view class="span">秒</view>
       </view>
     </view>
+  </view>
+  <view class="button-wrap">
+    <button type="primary" onTap="startToCount" style="width:100px">{{btnText}}</button>
   </view>
 </view>

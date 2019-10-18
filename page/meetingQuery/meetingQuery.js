@@ -15,6 +15,9 @@ Page({
       {code:'0-60',name:'60分钟以内'}
     ],
     meetingThemeList: ['全部', '部门晨会'],
+    isShowUserPlaceholder: true,
+    isShowMeetingPlaceholder: true,
+    isShowTimePlaceholder: true,
   },
   onLoad() {
     this.getUserList();
@@ -62,6 +65,7 @@ Page({
           that.setData({
             dingUserName: that.data.userList[result.buttonIndex].dingUserName,
             dingUserId: that.data.userList[result.buttonIndex].dingUserId,
+            isShowUserPlaceholder: false,
           });
         },
         onFail: function(err) {}
@@ -79,6 +83,7 @@ Page({
         onSuccess: function(result) {
           that.setData({
             meetingName: that.data.meetingThemeList[result.buttonIndex],
+            isShowMeetingPlaceholder: false,
           });
         },
         onFail: function(err) {}
@@ -96,6 +101,7 @@ Page({
         onSuccess: function(result) {
           that.setData({
             timeSpan: that.data.timeSpanList[result.buttonIndex].name,
+            isShowTimePlaceholder: false,
           });
         },
         onFail: function(err) {}
