@@ -12,8 +12,8 @@ Page({
     data:{
         corpId: '',
         authCode:'',
-        userId:'',
-        userName:'',
+        dingUserId:'',
+        dingUserName:'',
         hideList: true,
     },
     loginSystem() {
@@ -35,10 +35,8 @@ Page({
                     success: (res) => {
                         // dd.alert({content: "step2"});
                         console.log('success----',res)
-                        app.globalData.userId = res.data.result.userId;
-                        app.globalData.userName = res.data.result.userName;
-                       
-                        console.log('success----', app.globalData.userId + app.globalData.userName )
+                        app.globalData.dingUserId = res.data.result.dingUserId;
+                        app.globalData.dingUserName = res.data.result.dingUserName;
                     },
                     fail: (res) => {
                         console.log("httpRequestFail---",res)
@@ -65,7 +63,6 @@ Page({
       dd.navigateTo({url:'/page/lateList/lateList'});
     },
     showNosignList(){
-      console.log('=============showNosignList');
       dd.navigateTo({url:'/page/nosignList/nosignList'});
     },
     showException(){
@@ -80,7 +77,7 @@ Page({
     onLoad(){
         let _this = this;
 
-        if (app.globalData.userId == ''){
+        if (app.globalData.dingUserId == ''){
            this.loginSystem();
         }
         

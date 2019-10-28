@@ -17,7 +17,7 @@
       </view>
       <view class="item">
         <view class="item_title">会议时长</view>
-        <view class="item_input" name="meetingName" onTap="openTimeActionSheet">
+        <view class="item_input" name="timeSpan" onTap="openTimeActionSheet">
           <view a:if="{{!isShowTimePlaceholder}}">{{timeSpan}}</view>
           <view class="placeholder" a:if="{{isShowTimePlaceholder}}">请选择会议时长</view>
         </view>

@@ -8,17 +8,17 @@
         <button type="primary" class="recbutton" style="background:#ee4b47" onTap="showNosignList">漏</button>
         <view class="bttitle">漏打卡</view>
       </view>
-      <view style="width: 33%; display: inline-block; text-align: center">
+      <!-- <view style="width: 33%; display: inline-block; text-align: center">
         <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showException">补</button>
         <view class="bttitle">交通补贴</view>
-      </view>
+      </view> -->
       <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
-        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeetingList">会</button>
-        <view class="bttitle">我要开会</view>
+        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeetingList">L</button>
+        <view class="bttitle">会议记录</view>
       </view>
       <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
         <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeeting">会</button>
-        <view class="bttitle">开会</view>
+        <view class="bttitle">我要开会</view>
       </view>
     </view>
 

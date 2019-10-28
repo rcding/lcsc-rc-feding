@@ -13,7 +13,7 @@
           </view>
           <view class="content">
             <view class="content_left">{{item.meetingName}}</view>
-            <view class="content_right">{{item.costTime}}</view>
+            <view class="content_right">{{item.costTime == null ? '会议中':item.costTime}}</view>
           </view>
         </view>
       </list-item>

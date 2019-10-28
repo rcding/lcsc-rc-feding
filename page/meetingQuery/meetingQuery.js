@@ -3,24 +3,41 @@ import * as jsapi from 'dingtalk-jsapi';
 let app = getApp();
 Page({
   data: {
-    dingUserId: '',
-    dingUserName: '',
-    meetingName: '',
-    timeSpan: '',
+    dingUserId: app.globalData.dingUserId,
+    dingUserName: app.globalData.dingUserName,
+    meetingName: '晨会',
+    timeSpan: '全部',
     userList: [],
     timeSpanList: [
-      {code:'',name:'全部'},
-      {code:'0-30',name:'30分总以内'},
-      {code:'30-60',name:'30~60分钟'},
-      {code:'0-60',name:'60分钟以内'}
+      { code: '', name: '全部' },
+      { code: '0-30', name: '30分总以内' },
+      { code: '30-60', name: '30~60分钟' },
+      { code: '0-60', name: '1小时以内' },
+      { code: '60~90', name: '60~90分钟' },
+      { code: '90~120', name: '90~120分钟' },
+      { code: '0~120', name: '两小时以内' },
     ],
-    meetingThemeList: ['全部', '部门晨会'],
-    isShowUserPlaceholder: true,
-    isShowMeetingPlaceholder: true,
-    isShowTimePlaceholder: true,
+    meetingThemeList: ['晨会'],
+    isShowUserPlaceholder: false,
+    isShowMeetingPlaceholder: false,
+    isShowTimePlaceholder: false,
   },
   onLoad() {
-    this.getUserList();
+
+    //this.getUserList();
+    this.setData({
+      dingUserId: app.globalData.dingUserId,
+      dingUserName: app.globalData.dingUserName,
+      meetingName: '晨会',
+      timeSpan: '全部',
+    });
+
+    this.setData({
+      isShowUserPlaceholder: this.data.dingUserName == '',
+      isShowMeetingPlaceholder: this.data.meetingName == '',
+      isShowTimePlaceholder: this.data.timeSpan == '',
+    });
+
   },
   getUserList() {
     let url = app.globalData.serviceurl + '/user/list';
@@ -32,10 +49,10 @@ Page({
         console.log(res);
         if (res.status === 200 && res.data.code === 200) {
           this.setData({
-                userList : res.data.result || [],
-              });
+            userList: res.data.result || [],
+          });
         } else {
-          dd.alert({content:"请求失败"});
+          dd.alert({ content: "请求失败" });
         }
       },
       fail: (res) => {
@@ -47,12 +64,12 @@ Page({
       }
     });
   },
-  formSubmit() {},
-  formReset() {},
+  formSubmit() { },
+  formReset() { },
   queryDataList() {
-    const params = 'dingUserId='+this.data.dingUserId+'&meetingName='+this.data.meetingName+'&timeSpan='+this.data.timeSpan;
+    const params = 'dingUserId=' + this.data.dingUserId + '&meetingName=' + this.data.meetingName + '&timeSpan=' + this.data.timeSpan + '&currentPage=1&pageSize=100';
     console.log(params);
-    dd.navigateTo({url:'/page/meetingList/meetingList?'+params});
+    dd.navigateTo({ url: '/page/meetingList/meetingList?' + params });
   },
   openUserActionSheet() {
     const that = this;
@@ -60,7 +77,7 @@ Page({
       jsapi.device.notification.actionSheet({
         title: '', //标题
         cancelButton: '取消', //取消按钮文本
-        otherButtons:that.data.userList.map(item => item.dingUserName),
+        otherButtons: that.data.userList.map(item => item.dingUserName),
         onSuccess: function(result) {
           that.setData({
             dingUserName: that.data.userList[result.buttonIndex].dingUserName,
@@ -68,7 +85,7 @@ Page({
             isShowUserPlaceholder: false,
           });
         },
-        onFail: function(err) {}
+        onFail: function(err) { }
       });
     });
   },
@@ -79,14 +96,14 @@ Page({
       jsapi.device.notification.actionSheet({
         title: '', //标题
         cancelButton: '取消', //取消按钮文本
-        otherButtons:that.data.meetingThemeList,
+        otherButtons: that.data.meetingThemeList,
         onSuccess: function(result) {
           that.setData({
             meetingName: that.data.meetingThemeList[result.buttonIndex],
             isShowMeetingPlaceholder: false,
           });
         },
-        onFail: function(err) {}
+        onFail: function(err) { }
       });
     });
   },
@@ -97,14 +114,14 @@ Page({
       jsapi.device.notification.actionSheet({
         title: '', //标题
         cancelButton: '取消', //取消按钮文本
-        otherButtons: ['全部', '30分总以内', '30~60分钟', '60分钟以内'],
+        otherButtons: ['全部', '30分总以内', '30~60分钟', '1小时以内'],
         onSuccess: function(result) {
           that.setData({
             timeSpan: that.data.timeSpanList[result.buttonIndex].name,
             isShowTimePlaceholder: false,
           });
         },
-        onFail: function(err) {}
+        onFail: function(err) { }
       });
     });
   },

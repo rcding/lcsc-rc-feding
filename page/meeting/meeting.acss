@@ -12,14 +12,15 @@
 .ul{
     padding: 0;
     text-align: center;
+    height: 120px;
 }
 .li{
     position: relative;
     text-align: center;
     list-style-type: none;
     display: inline-block;
-    width: 50px;
-    height:60px;
+    width: 68px;
+    height:100px;
     text-shadow:0 2px 1px #f4f4f4;
     border:1px solid #9fa2ad;
     border-radius: 5px;
@@ -61,19 +62,19 @@
     z-index: 1
 }
 .span{
-  font:20px 'BitstreamVeraSansMonoBold';
-  line-height: 30px;
+  font:28px 'BitstreamVeraSansMonoBold';
+  line-height: 50px;
 }
 .span:first-child{
-    font:20px 'BitstreamVeraSansMonoBold';
+    font:28px 'BitstreamVeraSansMonoBold';
     color: #52555a;
     display: block;
-    height: 30px;
-    line-height: 30px;
+    height: 50px;
+    line-height: 54px;
 }
 .button-wrap {
     text-align: center;
-    margin: 50px auto;
+    margin: 30px auto;
     align-items: center;
     justify-content: center;
 }
