@@ -19,7 +19,7 @@ App({
     dingUserName : '',
     meetingId:'',
     meetingBegainTime:0,
-    serviceurl : 'https://fatdingding.szlcsc.com',
+    serviceurl : 'https://dingding.szlcsc.com',
     startDate:'2019-06',
     sysdate : new Date().getFullYear() +'-' + (new Date().getMonth() < 9 ? '0':'') + (new Date().getMonth() + 1)
   }

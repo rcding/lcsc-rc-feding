@@ -5,7 +5,7 @@ Page({
     meetingName: '',
     timeSpan: '',
     currentPage: 1,
-    pageSize: 100,
+    pageSize: 1000,
     items: [
       {
         dingUserName: '喻福松',
@@ -49,7 +49,7 @@ Page({
         meetingName:this.data.meetingName,
         timeSpan:this.data.timeSpan == '全部' ? '' :this.data.timeSpan,
         currentPage:1,
-        pageSize:10
+        pageSize:1000
       },
       dataType: 'json',
       success: (res) => {

@@ -17,7 +17,7 @@
         <view class="bttitle">会议记录</view>
       </view>
       <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
-        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeeting">会</button>
+        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeeting">H</button>
         <view class="bttitle">我要开会</view>
       </view>
     </view>
