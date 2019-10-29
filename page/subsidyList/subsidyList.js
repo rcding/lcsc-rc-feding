@@ -30,7 +30,7 @@ Page({
       dd.alert({ content: '请选择时间' });
       return;
     }
-    let url = app.globalData.serviceurl + '/subsidy/list?month=' + dateStr[1] + '&year=' + dateStr[0]+'&userid=' + app.globalData.userId;
+    let url = app.globalData.serviceurl + '/statistics/subsidy/list?month=' + dateStr[1] + '&year=' + dateStr[0]+'&userid=' + app.globalData.dingUserId;
     dd.showLoading();
     dd.httpRequest({
       url: url,

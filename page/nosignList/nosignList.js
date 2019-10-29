@@ -30,7 +30,7 @@ Page({
       dd.alert({ content: '请选择时间' });
       return;
     }
-    let url = app.globalData.serviceurl + '/nosign/list?month=' + dateStr[1] + '&year=' + dateStr[0]+'&userid=' + app.globalData.userId;
+    let url = app.globalData.serviceurl + '/statistics/nosign/list?month=' + dateStr[1] + '&year=' + dateStr[0]+'&userid=' + app.globalData.dingUserId;
     dd.showLoading();
     dd.httpRequest({
       url: url,
@@ -38,7 +38,7 @@ Page({
       dataType: 'json',
       success: (res) => {
         // dd.alert({content: "step2"});
-        if (res.data.success) {
+        if (res.data.code == 200) {
 
           let result = res.data.result;
           console.log('success----',result);

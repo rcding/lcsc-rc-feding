@@ -8,10 +8,7 @@ Page({
     pageSize: 1000,
     items: [
       {
-        dingUserName: '喻福松',
-        meetingName: '开了一个会',
-        costTime: '会议中',
-        startTime: '2019.10.12',
+        
       }
     ],
   },

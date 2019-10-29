@@ -24,7 +24,7 @@ Page({
   },
   onLoad() {
 
-    //this.getUserList();
+    this.getUserList();
     this.setData({
       dingUserId: app.globalData.dingUserId,
       dingUserName: app.globalData.dingUserName,
@@ -40,6 +40,7 @@ Page({
 
   },
   getUserList() {
+    dd.showLoading();
     let url = app.globalData.serviceurl + '/user/list';
     dd.httpRequest({
       url: url,
@@ -48,8 +49,11 @@ Page({
       success: (res) => {
         console.log(res);
         if (res.status === 200 && res.data.code === 200) {
+          let tuserList = [{dingUserId:'',dingUserName:'全部'}];
+         tuserList = tuserList.concat(res.data.result);
+         console.log(res.data.result);
           this.setData({
-            userList: res.data.result || [],
+            userList: tuserList,
           });
         } else {
           dd.alert({ content: "请求失败" });
