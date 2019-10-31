@@ -25,6 +25,9 @@ Page({
     // }, 200);
     // console.log(document);
   },
+  onPullDownRefresh() {
+    console.log('i am in top');
+  },
   onReachBottom() { // 上拉到底部触发
     console.log('i am in bottom');
     this.getList();
