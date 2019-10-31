@@ -25,9 +25,14 @@ Page({
     // }, 200);
     // console.log(document);
   },
+  onReachBottom() { // 上拉到底部触发
+    console.log('i am in bottom');
+    this.getList();
+  },
   getList() {
     
     let url = app.globalData.serviceurl + '/meeting/page';
+    const reserveData = this.data.items;
     // if (this.data.dingUserId !== '全部') {
     //   url += '&dingUserId=' + this.data.dingUserId;
     // }
@@ -53,7 +58,7 @@ Page({
         console.log('yfs==>',res);
         if (res.status === 200 && res.data.code === 200) {
           this.setData({
-            items: res.data.result.dataList || [],
+            items: reserveData.concat(res.data.result.dataList || []),
           });
         } else {
           dd.alert({ content: "请求失败" });
