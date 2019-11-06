@@ -7,13 +7,16 @@
         index="{{index}}"
         last="{{index === (items.length - 1)}}">
         <view class="card">
-          <view class="title">
-            <view class="title_left">{{item.dingUserName}}</view>
-            <view class="title_right">{{item.startTime}}</view>
+          <view class="left">
+            <view class="icon">
+              {{item.dingUserName.slice(-2)}}
+            </view>
           </view>
-          <view class="content">
-            <view class="content_left">{{item.meetingName}}</view>
-            <view class="content_right">{{item.costTime == null ? '会议中':item.costTime}}</view>
+          <view class="right">
+            <view class="title">会议主题：{{item.meetingName}}</view>
+            <view class="content">主持人：{{item.dingUserName}}</view>
+            <view class="content">开始时间：{{item.startTime}}</view>
+            <view class="content">耗费时长：{{item.costTime == null ? '会议中':item.costTime}}</view>
           </view>
         </view>
       </list-item>
