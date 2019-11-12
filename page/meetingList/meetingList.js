@@ -6,18 +6,7 @@ Page({
     timeSpan: '',
     currentPage: 1,
     pageSize: 1000,
-    items: [
-      {
-        dingUserName: '喻福松',
-        startTime: '2019-10-02 09:12:32',
-        meetingName: '2019年11月月例会讨论',
-      },
-      {
-        dingUserName: '李一凡',
-        startTime: '2019-11-06 09:00:00',
-        meetingName: '2019年11月周例会',
-      },
-    ],
+    items: [],
   },
   onLoad(query) {
     console.log('list ', query);
