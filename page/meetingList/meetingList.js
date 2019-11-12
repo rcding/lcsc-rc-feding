@@ -26,7 +26,7 @@ Page({
   },
   onReachBottom() { // 上拉到底部触发
     console.log('i am in bottom');
-    this.getList();
+    // this.getList();
   },
   getList() {
     

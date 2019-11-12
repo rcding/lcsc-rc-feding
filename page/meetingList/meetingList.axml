@@ -3,6 +3,7 @@
     <scroll-view class="scroll_view" scroll-y="{{true}}" onScrollToLower="lower" scroll-top="{{scrollTop}}">
       <block a:for="{{items}}">
       <list-item
+        class="item"
         key="item-{{index}}"
         index="{{index}}"
         last="{{index === (items.length - 1)}}">
