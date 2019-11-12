@@ -1,5 +1,10 @@
 <view>
-    <view style="margin: 10px 0">
+
+<view style="margin: 15px 0">
+  <view class="action-title">日常考勤</view>
+</view>
+
+    <view style="margin: 20px 0">
       <view style="width: 33%; display: inline-block; text-align: center">
         <button type="primary" class="recbutton" style="background:#f54191" onTap="showLateList">迟</button>
         <view class="bttitle">迟到免扣</view>
@@ -8,20 +13,22 @@
         <button type="primary" class="recbutton" style="background:#ee4b47" onTap="showNosignList">漏</button>
         <view class="bttitle">漏打卡</view>
       </view>
-      <!-- <view style="width: 33%; display: inline-block; text-align: center">
-        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showException">补</button>
-        <view class="bttitle">交通补贴</view>
-      </view> -->
+    </view>
+<view style="margin: 15px 0">
+  <view class="action-title">会议助手</view>
+</view>
+<view style="margin: 20px 0">
+      
+      <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
+        <button type="primary" class="recbutton" style="background:#83AF9B" onTap="showMeeting">H</button>
+        <view class="bttitle">我要开会</view>
+      </view>
+
       <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
         <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeetingList">L</button>
         <view class="bttitle">会议记录</view>
       </view>
-      <view style="width: 33%; display: inline-block; text-align: center;margin-top:10px">
-        <button type="primary" class="recbutton" style="background:#3cc24c" onTap="showMeeting">H</button>
-        <view class="bttitle">我要开会</view>
-      </view>
     </view>
-
     <view hidden="{{hideList}}">
         <view class="row">CorpId:{{corpId}}</view>
         <view class="row">AuthCode:{{authCode}}</view>

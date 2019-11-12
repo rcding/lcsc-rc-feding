@@ -121,7 +121,7 @@ Page({
         otherButtons: ['全部', '30分总以内', '30~60分钟', '1小时以内'],
         onSuccess: function(result) {
           that.setData({
-            timeSpan: that.data.timeSpanList[result.buttonIndex].name,
+            timeSpan: that.data.timeSpanList[result.buttonIndex].code,
             isShowTimePlaceholder: false,
           });
         },

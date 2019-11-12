@@ -17,6 +17,15 @@ margin-top: 5px;
 font-family: YouYuan
 } 
 
+.action-title {
+text-align: left; 
+text-indent: 20px;
+margin-top: 5px;
+font-family: YouYuan;
+font-size: 20px;
+font-weight: bold
+} 
+
 .myButton {
   width: 100px;
   height: 100px;
