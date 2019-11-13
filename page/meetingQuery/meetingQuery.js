@@ -6,7 +6,8 @@ Page({
     dingUserId: app.globalData.dingUserId,
     dingUserName: app.globalData.dingUserName,
     meetingName: '晨会',
-    timeSpan: '全部',
+    timeSpanName: '全部',
+    timeSpan:'',
     userList: [],
     timeSpanList: [
       { code: '', name: '全部' },
@@ -29,13 +30,13 @@ Page({
       dingUserId: app.globalData.dingUserId,
       dingUserName: app.globalData.dingUserName,
       meetingName: '晨会',
-      timeSpan: '全部',
+      timeSpanName: '全部',
     });
 
     this.setData({
       isShowUserPlaceholder: this.data.dingUserName == '',
       isShowMeetingPlaceholder: this.data.meetingName == '',
-      isShowTimePlaceholder: this.data.timeSpan == '',
+      isShowTimePlaceholder: this.data.timeSpanName == '',
     });
 
   },
@@ -71,7 +72,7 @@ Page({
   formSubmit() { },
   formReset() { },
   queryDataList() {
-    const params = 'dingUserId=' + this.data.dingUserId + '&meetingName=' + this.data.meetingName + '&timeSpan=' + this.data.timeSpan + '&currentPage=1&pageSize=100';
+    const params = 'dingUserId=' + this.data.dingUserId + '&meetingName=' + this.data.meetingName + '&timecode=' + this.data.timecode + '&currentPage=1&pageSize=100';
     console.log(params);
     dd.navigateTo({ url: '/page/meetingList/meetingList?' + params });
   },
@@ -112,7 +113,6 @@ Page({
     });
   },
   openTimeActionSheet() {
-    const list = this.timeSpanList;
     const that = this;
     jsapi.ready(function() {
       jsapi.device.notification.actionSheet({
@@ -121,6 +121,7 @@ Page({
         otherButtons: ['全部', '30分总以内', '30~60分钟', '1小时以内'],
         onSuccess: function(result) {
           that.setData({
+            timeSpanName: that.data.timeSpanList[result.buttonIndex].name,
             timeSpan: that.data.timeSpanList[result.buttonIndex].code,
             isShowTimePlaceholder: false,
           });
