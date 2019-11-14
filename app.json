@@ -6,6 +6,7 @@
     "page/subsidyList/subsidyList",
     "page/meetingList/meetingList",
     "page/meetingQuery/meetingQuery",
+    "page/meetingFilterSelect/meetingFilterSelect",
     "page/meeting/meeting"
   ],
   "window": {

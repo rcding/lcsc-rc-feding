@@ -1,0 +1,24 @@
+{
+  "name": "lcsc-rc-feding",
+  "version": "1.0.0",
+  "description": "init project",
+  "main": "app.js",
+  "dependencies": {
+    "dingtalk-jsapi": "^2.8.11",
+    "mini-ddui": "^0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rcding/lcsc-rc-feding.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcding/lcsc-rc-feding/issues"
+  },
+  "homepage": "https://github.com/rcding/lcsc-rc-feding#readme"
+}

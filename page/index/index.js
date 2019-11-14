@@ -69,7 +69,8 @@ Page({
       dd.navigateTo({url:'/page/subsidyList/subsidyList'});
     },
     showMeetingList() {
-      dd.navigateTo({url:'/page/meetingQuery/meetingQuery'});
+      const params = 'dingUserId=' + app.globalData.dingUserId + '&meetingName=' + '晨会' + '&timeSpan=' + '' + '&currentPage=1&pageSize=100';
+      dd.navigateTo({ url: '/page/meetingList/meetingList?' + params });
     },
     showMeeting(){
       dd.navigateTo({url:'/page/meeting/meeting'});

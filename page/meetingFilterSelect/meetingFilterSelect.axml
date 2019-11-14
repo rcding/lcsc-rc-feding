@@ -1,0 +1,41 @@
+<view class="wrap">
+  <view class="title">
+    <view class="cycle blue"></view>
+    <view class="title-right">会议主题</view>
+  </view>
+  <block a:for="{{meetingThemeList}}">
+    <view 
+      class="square-wrap" 
+      data-item="{{item}}" 
+      onTap="selectMeetingTheme">
+      <view class="square" style="background: {{item === meetingName ? lightBlue: ''}}" >{{item}}</view>
+    </view>
+  </block>
+  <view class="title">
+    <view class="cycle green"></view>
+    <view class="title-right">会议时长</view>
+  </view>
+  <block a:for="{{timeSpanList}}">
+    <view 
+      class="square-wrap"
+      data-item="{{item}}" 
+      onTap="selectMeetingTime">
+      <view class="square" style="background: {{item.code === timeSpan ? lightGreen: ''}}" >{{item.name}}</view>
+    </view>
+  </block>
+  <view class="title">
+    <view class="cycle orange"></view>
+    <view class="title-right">主持人</view>
+  </view>
+  <block a:for="{{userList}}">
+    <view 
+      class="square-wrap"
+      data-item="{{item}}" 
+      onTap="selectMeetingUser">
+      <view class="square" style="background: {{item.dingUserId === dingUserId ? lightOrange: ''}}" >{{item.dingUserName}}</view>
+    </view>
+  </block>
+  <view class="fixed-bottom">
+    <button type="primary" onTap="queryDataList" style="width:100%; margin-bottom: 0">查询</button>
+  </view>
+</view>

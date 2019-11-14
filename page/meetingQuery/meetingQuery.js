@@ -22,6 +22,7 @@ Page({
     isShowUserPlaceholder: false,
     isShowMeetingPlaceholder: false,
     isShowTimePlaceholder: false,
+    dingUserNameList: [],
   },
   onLoad() {
 
@@ -53,8 +54,13 @@ Page({
           let tuserList = [{dingUserId:'',dingUserName:'全部'}];
          tuserList = tuserList.concat(res.data.result);
          console.log(res.data.result);
+          const list = [];
+          for(let i = 0; i < res.data.result.length; i += 1){
+            list.push(res.data.result[i].dingUserName);
+          }
           this.setData({
             userList: tuserList,
+            dingUserNameList: list,
           });
         } else {
           dd.alert({ content: "请求失败" });
@@ -82,7 +88,7 @@ Page({
       jsapi.device.notification.actionSheet({
         title: '', //标题
         cancelButton: '取消', //取消按钮文本
-        otherButtons: that.data.userList.map(item => item.dingUserName),
+        otherButtons: that.data.dingUserNameList,
         onSuccess: function(result) {
           that.setData({
             dingUserName: that.data.userList[result.buttonIndex].dingUserName,
@@ -118,7 +124,7 @@ Page({
       jsapi.device.notification.actionSheet({
         title: '', //标题
         cancelButton: '取消', //取消按钮文本
-        otherButtons: ['全部', '30分总以内', '30~60分钟', '1小时以内'],
+        otherButtons: that.data.timeSpanList,
         onSuccess: function(result) {
           that.setData({
             timeSpanName: that.data.timeSpanList[result.buttonIndex].name,

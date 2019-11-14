@@ -72,6 +72,9 @@ Page({
       }
     });
   },
+  filter() {
+    dd.navigateTo({ url: '/page/meetingFilterSelect/meetingFilterSelect?'});
+  },
   lower(e) {
     console.log(11);
   },

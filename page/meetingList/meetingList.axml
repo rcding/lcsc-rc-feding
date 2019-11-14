@@ -1,4 +1,8 @@
 <view class="wrap">
+  <view class="fixed-top" onTap="filter">
+    <image class="image" src="/static/img/filter.png"/>
+    筛选
+  </view>
   <scroll-view class="scroll">
     <scroll-view class="scroll_view" scroll-y="{{true}}" onScrollToLower="lower" scroll-top="{{scrollTop}}">
       <block a:for="{{items}}">

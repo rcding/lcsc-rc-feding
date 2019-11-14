@@ -143,6 +143,7 @@ require('../../page/nosignList/nosignList');
 require('../../page/subsidyList/subsidyList');
 require('../../page/meetingList/meetingList');
 require('../../page/meetingQuery/meetingQuery');
+require('../../page/meetingFilterSelect/meetingFilterSelect');
 require('../../page/meeting/meeting');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
