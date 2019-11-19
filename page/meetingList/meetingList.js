@@ -41,14 +41,18 @@ Page({
     // if (this.data.timeSpan !== '全部') {
     //   url += '&timeSpan=' + this.data.timeSpan;
     // }
-
+    let timeList = ['', ''];
+    if (this.data.timeSpan) {
+      timeList = this.data.timeSpan.split('-');
+    }
     dd.httpRequest({
       url: url,
       method: 'GET',
       data:{
         dingUserId: this.data.dingUserId,
         meetingName:this.data.meetingName,
-        timeSpan:this.data.timeSpan == '全部' ? '' :this.data.timeSpan,
+        fromCostTime: timeList[0],
+        toCostTime: timeList[1],
         currentPage:1,
         pageSize:1000
       },

@@ -50,3 +50,19 @@
   position: fixed;
   bottom: 1px;
 }
+.input-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-cycle{
+  width: 80px;
+  padding: 2px 10px;
+  border-radius: 15px;
+  text-align-last: center;
+  background: #F4F4F4;
+}
+.link{
+  display: inline-block;
+  margin: 0 3px;
+}

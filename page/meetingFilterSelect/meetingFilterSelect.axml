@@ -15,6 +15,11 @@
     <view class="cycle green"></view>
     <view class="title-right">会议时长</view>
   </view>
+  <view class="input-wrap">
+    <input class="input-cycle" type="number" value="{{timeDown}}" onInput="inputTimeDown"/> 
+    <view class="link"> - </view>
+    <input class="input-cycle" type="number" value="{{timeUp}}" onInput="inputTimeUp"/>
+  </view>
   <block a:for="{{timeSpanList}}">
     <view 
       class="square-wrap"
