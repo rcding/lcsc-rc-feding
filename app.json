@@ -12,7 +12,7 @@
   "window": {
     "enableWK": "YES",
     "enableDSL": true,
-    "defaultTitle": "考勤助手",
+    "defaultTitle": "立创助手",
     "backgroundColor": "#F5F5F9",
     "pullRefresh": false,
     "allowsBounceVertical": true
